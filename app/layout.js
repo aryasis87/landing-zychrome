@@ -4,9 +4,38 @@ import { Chivo, Poppins } from 'next/font/google';
 const chivo = Chivo({ variable: '--font-chivo', subsets: ['latin'], weight: ['600', '700', '900'] });
 const poppins = Poppins({ variable: '--font-poppins', weight: ['400', '600', '700'], subsets: ['latin'], display: 'swap' });
 
+const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Zychrome","description":"Webinar interaktif","url":"https://landing-zychrome.vercel.app","inLanguage":"id"};
+
 export const metadata = {
-  title: 'Zychrome — Webinar Interaktif Para Ahli',
-  description: 'Zychrome: optimalkan skill kamu melalui webinar interaktif dan inspiratif dari para ahli terbaik.',
+  metadataBase: new URL("https://landing-zychrome.vercel.app"),
+  title: "Zychrome — Webinar Interaktif Para Ahli",
+  description: "Zychrome: optimalkan skill kamu melalui webinar interaktif dan inspiratif dari para ahli terbaik.",
+  applicationName: "Zychrome",
+  keywords: ["webinar", "kelas online", "skill", "pelatihan", "webinar interaktif"],
+  authors: [{ name: "Zychrome" }],
+  creator: "Zychrome",
+  publisher: "Zychrome",
+  alternates: { canonical: "https://landing-zychrome.vercel.app" },
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: "https://landing-zychrome.vercel.app",
+    siteName: "Zychrome",
+    title: "Zychrome — Webinar Interaktif Para Ahli",
+    description: "Zychrome: optimalkan skill kamu melalui webinar interaktif dan inspiratif dari para ahli terbaik.",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Zychrome — Webinar Interaktif Para Ahli" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zychrome — Webinar Interaktif Para Ahli",
+    description: "Zychrome: optimalkan skill kamu melalui webinar interaktif dan inspiratif dari para ahli terbaik.",
+    images: ["/og.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -14,7 +43,8 @@ export default function RootLayout({ children }) {
     <html lang="id">
       <body className={`${chivo.variable} ${poppins.variable}`}>
         {children}
-      </body>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
+        </body>
     </html>
   );
 }
