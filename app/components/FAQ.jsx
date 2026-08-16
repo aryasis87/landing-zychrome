@@ -45,7 +45,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-green-50 relative">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-signal/30 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -54,12 +54,12 @@ const FAQ = () => {
           viewport={{ once: true }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-green-900 mb-3 sm:mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-400">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-chrome mb-3 sm:mb-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-signal to-signal">
               Pertanyaan yang Sering Diajukan
             </span>
           </h2>
-          <p className="text-base sm:text-lg text-green-700 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg text-signal max-w-3xl mx-auto px-4">
             Temukan jawaban untuk pertanyaan seputar seminar NH All One Bank
           </p>
         </motion.div>
@@ -70,22 +70,22 @@ const FAQ = () => {
             return (
               <div
                 key={index}
-                className="rounded-xl border border-green-200 bg-white transition-shadow"
+                className="rounded-xl border border-chrome/12 bg-graphite-2 transition-shadow"
               >
                 <button
                   onClick={() => toggleAccordion(index)}
                   aria-expanded={isOpen}
-                  className="w-full flex justify-between items-center p-4 sm:p-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500"
+                  className="w-full flex justify-between items-center p-4 sm:p-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-signal"
                 >
-                  <span className="text-green-900 font-semibold text-sm sm:text-base pr-4">{faq.question}</span>
+                  <span className="text-chrome font-semibold text-sm sm:text-base pr-4">{faq.question}</span>
                   {isOpen ? (
-                    <ChevronUpIcon className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    <ChevronUpIcon className="w-5 h-5 text-signal flex-shrink-0" />
                   ) : (
-                    <ChevronDownIcon className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    <ChevronDownIcon className="w-5 h-5 text-signal flex-shrink-0" />
                   )}
                 </button>
                 {isOpen && (
-                  <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-green-700 text-sm sm:text-base">
+                  <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-signal text-sm sm:text-base">
                     <p>{faq.answer}</p>
                   </div>
                 )}
@@ -95,10 +95,10 @@ const FAQ = () => {
         </div>
 
         <div className="mt-12 sm:mt-16 text-center">
-          <p className="text-green-700 mb-4 text-sm sm:text-base">Masih ada pertanyaan lain?</p>
+          <p className="text-signal mb-4 text-sm sm:text-base">Masih ada pertanyaan lain?</p>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg bg-green-600 text-white font-bold hover:bg-green-700 transition text-sm sm:text-base"
+            className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg bg-signal text-chrome font-bold hover:bg-signal transition text-sm sm:text-base"
           >
             Hubungi Customer Service
             <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

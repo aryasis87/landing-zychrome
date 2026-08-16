@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 const Message = () => {
   const [isVisible, setIsVisible] = useState(true);
 
+  // Sembunyi sendiri setelah 10 detik.
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
@@ -17,41 +18,52 @@ const Message = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 100 }}
+          /* Masuk dari bawah, bukan dari kanan: geseran sumbu-X membuat kotak
+             ini menonjol keluar layar dan memicu gulir mendatar di ponsel. */
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 24 }}
           transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-          className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 max-w-[calc(100vw-2rem)] sm:max-w-xs"
+          /* Di layar sempit melebar mengikuti tepi kiri-kanan; baru di sm ke atas
+             menempel di sudut kanan dengan lebar terbatas. */
+          className="fixed inset-x-4 bottom-4 z-50 sm:inset-x-auto sm:right-6 sm:bottom-6 sm:w-80"
+          role="status"
+          aria-live="polite"
         >
-          <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-3 sm:p-4 rounded-lg shadow-lg relative">
-            <div className="flex items-start">
-              <div className="flex-shrink-0">
-                <svg className="h-4 w-4 sm:h-5 sm:w-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <div className="ml-2 sm:ml-3 flex-1">
-                <p className="text-xs sm:text-sm font-medium">
-                  Landing Page <span className="font-bold">NH All One Bank</span>
-                </p>
-                <p className="text-[10px] sm:text-xs mt-1">
-                  Versi 1.0 - New & New Theme. Hubungi developer jika ada pertanyaan.
-                </p>
-              </div>
-              <button
-                onClick={() => setIsVisible(false)}
-                className="ml-2 text-green-500 hover:text-green-700 flex-shrink-0"
-                aria-label="Close"
+          <div className="relative rounded-lg border-l-4 border-yellow-500 bg-yellow-100 p-4 pr-9 text-yellow-800 shadow-lg">
+            <div className="flex items-start gap-3">
+              <svg
+                className="mt-0.5 h-5 w-5 flex-shrink-0 text-yellow-600"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                aria-hidden="true"
               >
-                <XMarkIcon className="h-3 w-3 sm:h-4 sm:w-4" />
-              </button>
+                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+              </svg>
+              <div className="min-w-0">
+                <p className="text-sm font-medium">
+                  Ini adalah <span className="font-bold">Versi 1.0</span> dari halaman ini
+                </p>
+                <p className="mt-1 text-xs">
+                  Jika terdapat bug silakan hubungi <span className="font-bold">Developer</span>.
+                </p>
+              </div>
             </div>
-            
+
+            <button
+              onClick={() => setIsVisible(false)}
+              className="absolute top-2 right-2 rounded p-1 text-yellow-600 transition-colors hover:text-yellow-900"
+              aria-label="Tutup pemberitahuan"
+            >
+              <XMarkIcon className="h-4 w-4" />
+            </button>
+
             <motion.div
               initial={{ width: '100%' }}
               animate={{ width: '0%' }}
               transition={{ duration: 10, ease: 'linear' }}
-              className="h-0.5 sm:h-1 bg-green-300 rounded-full mt-2"
+              className="mt-3 h-1 rounded-full bg-yellow-300"
+              aria-hidden="true"
             />
           </div>
         </motion.div>

@@ -1,4 +1,5 @@
 import "./globals.css";
+import MotionProvider from "./components/MotionProvider";
 import { Chivo, Poppins } from 'next/font/google';
 
 const chivo = Chivo({ variable: '--font-chivo', subsets: ['latin'], weight: ['600', '700', '900'] });
@@ -42,7 +43,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="id">
       <body className={`${chivo.variable} ${poppins.variable}`}>
-        {children}
+        <MotionProvider>{children}</MotionProvider>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
         </body>
     </html>

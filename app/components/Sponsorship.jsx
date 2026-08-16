@@ -71,10 +71,10 @@ const Sponsorship = () => {
   const silverSponsors = sponsors.filter(sponsor => sponsor.tier === "silver");
 
   return (
-    <section className="relative py-12 sm:py-16 bg-gradient-to-b from-white to-green-50 overflow-hidden">
+    <section className="relative py-12 sm:py-16 bg-gradient-to-b from-white to-signal/30 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-green-300 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-green-400 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-signal rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-signal rounded-full filter blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -87,15 +87,15 @@ const Sponsorship = () => {
         >
           <motion.h2 
             variants={itemVariants}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-green-900 mb-3 sm:mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-chrome mb-3 sm:mb-4"
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-signal to-signal">
               Partner Kami
             </span>
           </motion.h2>
           <motion.p 
             variants={itemVariants}
-            className="text-base sm:text-lg text-green-700 max-w-3xl mx-auto px-4"
+            className="text-base sm:text-lg text-signal max-w-3xl mx-auto px-4"
           >
             Terima kasih kepada partner yang mendukung peluncuran NH All One Bank
           </motion.p>
@@ -109,7 +109,7 @@ const Sponsorship = () => {
             viewport={{ once: true }}
             className="mb-12 sm:mb-16"
           >
-            <h3 className="text-center text-lg sm:text-xl font-semibold text-green-800 mb-6 sm:mb-8">Platinum Partner</h3>
+            <h3 className="text-center text-lg sm:text-xl font-semibold text-chrome mb-6 sm:mb-8">Platinum Partner</h3>
             <div className="flex flex-wrap justify-center gap-8 sm:gap-12">
               {platinumSponsors.map((sponsor, index) => (
                 <motion.a
@@ -119,7 +119,7 @@ const Sponsorship = () => {
                   href={sponsor.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center p-4 sm:p-6 bg-white rounded-2xl shadow-md border border-green-100 hover:shadow-lg transition-all"
+                  className="flex items-center justify-center p-4 sm:p-6 bg-graphite-2 rounded-2xl shadow-md border border-chrome/12 hover:shadow-lg transition-all"
                 >
                   <div className="relative w-48 sm:w-64 h-16 sm:h-20">
                     <Image
@@ -144,7 +144,7 @@ const Sponsorship = () => {
             viewport={{ once: true }}
             className="mb-12 sm:mb-16"
           >
-            <h3 className="text-center text-lg sm:text-xl font-semibold text-green-800 mb-6 sm:mb-8">Gold Partners</h3>
+            <h3 className="text-center text-lg sm:text-xl font-semibold text-chrome mb-6 sm:mb-8">Gold Partners</h3>
             <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
               {goldSponsors.map((sponsor, index) => (
                 <motion.a
@@ -154,7 +154,7 @@ const Sponsorship = () => {
                   href={sponsor.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center p-4 sm:p-5 bg-white rounded-xl shadow-sm border border-green-100 hover:shadow-md transition-all"
+                  className="flex items-center justify-center p-4 sm:p-5 bg-graphite-2 rounded-xl shadow-sm border border-chrome/12 hover:shadow-md transition-all"
                 >
                   <div className="relative w-36 sm:w-48 h-12 sm:h-16">
                     <Image
@@ -179,7 +179,7 @@ const Sponsorship = () => {
             viewport={{ once: true }}
             className="mb-12 sm:mb-16"
           >
-            <h3 className="text-center text-lg sm:text-xl font-semibold text-green-800 mb-6 sm:mb-8">Silver Partners</h3>
+            <h3 className="text-center text-lg sm:text-xl font-semibold text-chrome mb-6 sm:mb-8">Silver Partners</h3>
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
               {silverSponsors.map((sponsor, index) => (
                 <motion.a
@@ -189,7 +189,7 @@ const Sponsorship = () => {
                   href={sponsor.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow-sm border border-green-100 hover:shadow-md transition-all"
+                  className="flex items-center justify-center p-3 sm:p-4 bg-graphite-2 rounded-lg shadow-sm border border-chrome/12 hover:shadow-md transition-all"
                 >
                   <div className="relative w-28 sm:w-36 h-10 sm:h-12">
                     <Image
@@ -211,15 +211,15 @@ const Sponsorship = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-12 bg-green-600/10 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-green-200 max-w-3xl mx-auto text-center"
+          className="mt-12 bg-signal/10 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-chrome/12 max-w-3xl mx-auto text-center"
         >
-          <h3 className="text-xl sm:text-2xl font-bold text-green-900 mb-3 sm:mb-4">Jadi Partner NH Bank?</h3>
-          <p className="text-green-700 mb-4 sm:mb-6 text-sm sm:text-base">Bergabunglah dengan ekosistem perbankan digital terdepan dan dapatkan berbagai keuntungan eksklusif.</p>
+          <h3 className="text-xl sm:text-2xl font-bold text-chrome mb-3 sm:mb-4">Jadi Partner NH Bank?</h3>
+          <p className="text-signal mb-4 sm:mb-6 text-sm sm:text-base">Bergabunglah dengan ekosistem perbankan digital terdepan dan dapatkan berbagai keuntungan eksklusif.</p>
           <motion.a
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg bg-white text-green-600 font-bold shadow-md hover:shadow-lg transition-all border border-green-300 text-sm sm:text-base"
+            className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg bg-graphite-2 text-signal font-bold shadow-md hover:shadow-lg transition-all border border-signal text-sm sm:text-base"
           >
             Hubungi Partnership Team
             <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

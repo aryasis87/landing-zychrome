@@ -86,7 +86,7 @@ const Pricing = () => {
   };
 
   return (
-    <section className="relative py-16 sm:py-20 md:py-24 bg-white">
+    <section className="relative py-16 sm:py-20 md:py-24 bg-graphite-2">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
           initial="hidden"
@@ -97,13 +97,13 @@ const Pricing = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-green-900 mb-3"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-chrome mb-3"
           >
             Pilih Paket Anda
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-base sm:text-lg text-green-700 max-w-2xl mx-auto"
+            className="text-base sm:text-lg text-signal max-w-2xl mx-auto"
           >
             Benefit eksklusif untuk setiap peserta
           </motion.p>
@@ -122,17 +122,17 @@ const Pricing = () => {
               key={index}
               variants={itemVariants}
               whileHover={{ y: -8 }}
-              className={`relative bg-white rounded-2xl p-8 transition-all ${
+              className={`relative bg-graphite-2 rounded-2xl p-8 transition-all ${
                 plan.popular 
-                  ? 'border-2 border-green-500 shadow-xl shadow-green-100' 
-                  : 'border border-green-200 shadow-lg hover:shadow-xl hover:border-green-300'
+                  ? 'border-2 border-signal shadow-xl shadow-signal/20' 
+                  : 'border border-chrome/12 shadow-lg hover:shadow-xl hover:border-signal'
               }`}
               role="region"
               aria-labelledby={`plan-title-${index}`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full flex items-center gap-1 shadow-lg">
+                  <div className="bg-gradient-to-r from-signal to-signal-2 text-chrome text-xs font-semibold px-4 py-1.5 rounded-full flex items-center gap-1 shadow-lg">
                     <StarIcon className="w-3.5 h-3.5" />
                     TERPOPULER
                   </div>
@@ -142,16 +142,16 @@ const Pricing = () => {
               <div className="mb-8">
                 <h3
                   id={`plan-title-${index}`}
-                  className="text-xl font-semibold text-green-900 mb-2"
+                  className="text-xl font-semibold text-chrome mb-2"
                 >
                   {plan.name}
                 </h3>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-green-600">
+                  <span className="text-4xl font-bold text-signal">
                     {plan.price}
                   </span>
                   {plan.duration && (
-                    <span className="text-sm text-green-600/70">
+                    <span className="text-sm text-signal/70">
                       / {plan.duration}
                     </span>
                   )}
@@ -162,11 +162,11 @@ const Pricing = () => {
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="mt-0.5 flex-shrink-0">
-                      <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
-                        <CheckIcon className="w-3 h-3 text-green-600" />
+                      <div className="w-5 h-5 rounded-full bg-signal/12 flex items-center justify-center">
+                        <CheckIcon className="w-3 h-3 text-signal" />
                       </div>
                     </div>
-                    <span className="text-sm text-green-800">{feature}</span>
+                    <span className="text-sm text-chrome">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -177,8 +177,8 @@ const Pricing = () => {
                 whileTap={{ scale: 0.98 }}
                 className={`block w-full text-center px-6 py-3 rounded-xl font-semibold transition-all ${
                   plan.popular 
-                    ? 'bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white shadow-lg shadow-green-200' 
-                    : 'bg-green-50 hover:bg-green-100 text-green-700 border border-green-200'
+                    ? 'bg-gradient-to-r from-signal to-signal hover:from-signal hover:to-signal-2 text-chrome shadow-lg shadow-signal/20' 
+                    : 'bg-graphite-2 hover:bg-signal/12 text-signal border border-chrome/12'
                 }`}
               >
                 {plan.cta}
@@ -198,17 +198,17 @@ const Pricing = () => {
               {pricingPlans.map((plan, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-2">
                   <div
-                    className={`relative bg-white rounded-2xl p-6 sm:p-8 max-w-md mx-auto transition-all ${
+                    className={`relative bg-graphite-2 rounded-2xl p-6 sm:p-8 max-w-md mx-auto transition-all ${
                       plan.popular 
-                        ? 'border-2 border-green-500 shadow-xl shadow-green-100' 
-                        : 'border border-green-200 shadow-lg'
+                        ? 'border-2 border-signal shadow-xl shadow-signal/20' 
+                        : 'border border-chrome/12 shadow-lg'
                     }`}
                     role="region"
                     aria-labelledby={`plan-mobile-title-${index}`}
                   >
                     {plan.popular && (
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                        <div className="bg-gradient-to-r from-green-500 to-green-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full flex items-center gap-1 shadow-lg">
+                        <div className="bg-gradient-to-r from-signal to-signal-2 text-chrome text-xs font-semibold px-4 py-1.5 rounded-full flex items-center gap-1 shadow-lg">
                           <StarIcon className="w-3.5 h-3.5" />
                           TERPOPULER
                         </div>
@@ -218,16 +218,16 @@ const Pricing = () => {
                     <div className="mb-6 sm:mb-8 pt-2">
                       <h3
                         id={`plan-mobile-title-${index}`}
-                        className="text-lg sm:text-xl font-semibold text-green-900 mb-2"
+                        className="text-lg sm:text-xl font-semibold text-chrome mb-2"
                       >
                         {plan.name}
                       </h3>
                       <div className="flex items-baseline gap-1">
-                        <span className="text-3xl sm:text-4xl font-bold text-green-600">
+                        <span className="text-3xl sm:text-4xl font-bold text-signal">
                           {plan.price}
                         </span>
                         {plan.duration && (
-                          <span className="text-xs sm:text-sm text-green-600/70">
+                          <span className="text-xs sm:text-sm text-signal/70">
                             / {plan.duration}
                           </span>
                         )}
@@ -238,11 +238,11 @@ const Pricing = () => {
                       {plan.features.map((feature, i) => (
                         <li key={i} className="flex items-start gap-3">
                           <div className="mt-0.5 flex-shrink-0">
-                            <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
-                              <CheckIcon className="w-3 h-3 text-green-600" />
+                            <div className="w-5 h-5 rounded-full bg-signal/12 flex items-center justify-center">
+                              <CheckIcon className="w-3 h-3 text-signal" />
                             </div>
                           </div>
-                          <span className="text-xs sm:text-sm text-green-800">{feature}</span>
+                          <span className="text-xs sm:text-sm text-chrome">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -253,8 +253,8 @@ const Pricing = () => {
                       whileTap={{ scale: 0.98 }}
                       className={`block w-full text-center px-6 py-3 rounded-xl font-semibold text-sm sm:text-base transition-all ${
                         plan.popular 
-                          ? 'bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white shadow-lg shadow-green-200' 
-                          : 'bg-green-50 hover:bg-green-100 text-green-700 border border-green-200'
+                          ? 'bg-gradient-to-r from-signal to-signal hover:from-signal hover:to-signal-2 text-chrome shadow-lg shadow-signal/20' 
+                          : 'bg-graphite-2 hover:bg-signal/12 text-signal border border-chrome/12'
                       }`}
                     >
                       {plan.cta}
@@ -268,14 +268,14 @@ const Pricing = () => {
           {/* Carousel Controls */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg text-green-600 hover:bg-green-50 transition-colors border border-green-200"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-graphite-2 rounded-full p-2 shadow-lg text-signal hover:bg-graphite-2 transition-colors border border-chrome/12"
             aria-label="Previous pricing plan"
           >
             <ChevronLeftIcon className="w-5 h-5" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg text-green-600 hover:bg-green-50 transition-colors border border-green-200"
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-graphite-2 rounded-full p-2 shadow-lg text-signal hover:bg-graphite-2 transition-colors border border-chrome/12"
             aria-label="Next pricing plan"
           >
             <ChevronRightIcon className="w-5 h-5" />
@@ -288,7 +288,7 @@ const Pricing = () => {
                 key={i}
                 onClick={() => setCurrentSlide(i)}
                 className={`h-1.5 rounded-full transition-all ${
-                  i === currentSlide ? 'bg-green-600 w-8' : 'bg-green-300 w-1.5'
+                  i === currentSlide ? 'bg-signal w-8' : 'bg-signal w-1.5'
                 }`}
                 aria-label={`Go to plan ${i + 1}`}
               />
@@ -304,15 +304,15 @@ const Pricing = () => {
           viewport={{ once: true }}
           className="mt-12 sm:mt-16"
         >
-          <div className="max-w-3xl mx-auto bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-6 sm:p-8 shadow-xl shadow-green-200">
+          <div className="max-w-3xl mx-auto bg-gradient-to-r from-signal to-signal-2 rounded-2xl p-6 sm:p-8 shadow-xl shadow-signal/20">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-center sm:text-left">
-              <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full shadow-sm" aria-hidden="true">
-                <GiftIcon className="w-8 h-8 text-white" />
+              <div className="bg-graphite-2/20 backdrop-blur-sm p-3 rounded-full shadow-sm" aria-hidden="true">
+                <GiftIcon className="w-8 h-8 text-chrome" />
               </div>
               <div>
-                <h4 className="font-bold text-white text-lg sm:text-xl mb-1">Early Bird Special!</h4>
-                <p className="text-green-50 text-sm sm:text-base">
-                  50 pendaftar pertama mendapat voucher NH Bank <strong className="text-white">Rp 100.000</strong> + merchandise eksklusif
+                <h4 className="font-bold text-chrome text-lg sm:text-xl mb-1">Early Bird Special!</h4>
+                <p className="text-chrome text-sm sm:text-base">
+                  50 pendaftar pertama mendapat voucher NH Bank <strong className="text-chrome">Rp 100.000</strong> + merchandise eksklusif
                 </p>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import Hero from "./components/Hero";
+import Interaction from "./components/Interaction";
 import About from "./components/About";
 import Speakers from "./components/Speakers";
 import Schedule from "./components/Schedule";
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Message />
         <Hero />
+        <Interaction />
         <About />
         <Speakers />
         <Schedule />
