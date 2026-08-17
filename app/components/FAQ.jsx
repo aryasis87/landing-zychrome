@@ -45,7 +45,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-signal/30 relative">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-graphite to-graphite-2 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -98,7 +98,7 @@ const FAQ = () => {
           <p className="text-signal mb-4 text-sm sm:text-base">Masih ada pertanyaan lain?</p>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg bg-signal text-chrome font-bold hover:bg-signal transition text-sm sm:text-base"
+            className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg bg-signal text-graphite font-bold hover:bg-signal transition text-sm sm:text-base"
           >
             Hubungi Customer Service
             <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

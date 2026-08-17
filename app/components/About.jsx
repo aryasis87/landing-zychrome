@@ -69,7 +69,7 @@ const About = () => {
   };
 
   return (
-    <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-signal/30 to-white overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-graphite-2 to-graphite overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-20 right-20 w-64 h-64 bg-signal rounded-full blur-3xl opacity-10"></div>
         <div className="absolute bottom-10 left-1/4 w-80 h-80 bg-signal rounded-full blur-3xl opacity-10"></div>

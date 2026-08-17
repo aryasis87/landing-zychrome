@@ -74,7 +74,7 @@ const Speakers = () => {
 
   return (
     <section
-      className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-signal/30 overflow-hidden"
+      className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-graphite to-graphite-2 overflow-hidden"
       aria-labelledby="speakers-heading"
     >
       <div className="absolute inset-0 opacity-10 pointer-events-none" aria-hidden="true">
@@ -141,7 +141,7 @@ const Speakers = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`LinkedIn ${speaker.name}`}
-                    className="bg-signal text-chrome p-2 rounded-full hover:bg-signal transition-colors"
+                    className="bg-signal text-graphite p-2 rounded-full hover:bg-signal transition-colors"
                   >
                     <LinkedinIcon className="w-4 h-4" />
                   </a>
@@ -150,7 +150,7 @@ const Speakers = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Twitter ${speaker.name}`}
-                    className="bg-signal text-chrome p-2 rounded-full hover:bg-signal transition-colors"
+                    className="bg-signal text-graphite p-2 rounded-full hover:bg-signal transition-colors"
                   >
                     <TwitterIcon className="w-4 h-4" />
                   </a>
@@ -208,7 +208,7 @@ const Speakers = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`LinkedIn ${speaker.name}`}
-                          className="bg-signal text-chrome p-2 rounded-full hover:bg-signal transition-colors"
+                          className="bg-signal text-graphite p-2 rounded-full hover:bg-signal transition-colors"
                         >
                           <LinkedinIcon className="w-4 h-4" />
                         </a>
@@ -217,7 +217,7 @@ const Speakers = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`Twitter ${speaker.name}`}
-                          className="bg-signal text-chrome p-2 rounded-full hover:bg-signal transition-colors"
+                          className="bg-signal text-graphite p-2 rounded-full hover:bg-signal transition-colors"
                         >
                           <TwitterIcon className="w-4 h-4" />
                         </a>
@@ -293,7 +293,7 @@ const Speakers = () => {
             href="#register"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center bg-gradient-to-r from-signal to-signal text-chrome px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg font-bold hover:shadow-xl transition-all text-sm sm:text-base"
+            className="inline-flex items-center justify-center bg-gradient-to-r from-signal to-signal text-graphite px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg font-bold hover:shadow-xl transition-all text-sm sm:text-base"
           >
             Daftar Sekarang
             <ArrowRightIcon className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />

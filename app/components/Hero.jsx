@@ -73,7 +73,7 @@ export default function Hero() {
                   <dt className="sr-only">{k}</dt>
                   <dd>
                     <span className="block text-2xl font-bold text-chrome">{n}</span>
-                    <span className="meter-label mt-2.5 block text-chrome-dim/60">{k}</span>
+                    <span className="meter-label mt-2.5 block text-chrome-dim">{k}</span>
                   </dd>
                 </div>
               ))}
@@ -88,7 +88,7 @@ export default function Hero() {
             className="border border-chrome/12 bg-graphite-2 p-7 sm:p-8"
           >
             <div className="mb-7 flex items-center justify-between border-b border-chrome/12 pb-4">
-              <span className="meter-label text-chrome-dim/60">Panel Keterlibatan</span>
+              <span className="meter-label text-chrome-dim">Panel Keterlibatan</span>
               <span aria-hidden="true" className="signal-bars">
                 <span /><span /><span /><span /><span />
               </span>
@@ -103,7 +103,7 @@ export default function Hero() {
               ].map(([label, nilai]) => (
                 <div key={label}>
                   <div className="flex items-baseline justify-between gap-4">
-                    <dt className="text-sm text-chrome/85">{label}</dt>
+                    <dt className="text-sm text-chrome/90">{label}</dt>
                     <dd className="meter-label text-signal">{nilai}%</dd>
                   </div>
                   <div className="mt-2.5 h-1.5 w-full bg-chrome/10">
@@ -113,7 +113,7 @@ export default function Hero() {
               ))}
             </dl>
 
-            <p className="meter-label mt-7 border-t border-chrome/12 pt-5 leading-[1.7] text-chrome-dim/45">
+            <p className="meter-label mt-7 border-t border-chrome/12 pt-5 leading-[1.7] text-chrome-dim">
               Angka contoh dari sesi purwarupa
             </p>
           </motion.div>

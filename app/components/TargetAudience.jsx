@@ -78,7 +78,7 @@ const TargetAudience = () => {
 
   return (
     <section
-      className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-signal/30 overflow-hidden"
+      className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-graphite to-graphite-2 overflow-hidden"
       aria-labelledby="target-audience-heading"
     >
       <div
@@ -256,7 +256,7 @@ const TargetAudience = () => {
             aria-label="Daftar Sekarang"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-lg bg-gradient-to-r from-signal to-signal text-chrome font-bold shadow-lg hover:shadow-xl transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-signal text-sm sm:text-base"
+            className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-lg bg-gradient-to-r from-signal to-signal text-graphite font-bold shadow-lg hover:shadow-xl transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-signal text-sm sm:text-base"
           >
             Daftar Sekarang - Gratis!
             <svg

@@ -46,7 +46,7 @@ export default function Interaction() {
               className="absolute -translate-x-1/2"
               style={{ left: `${(t.menit / TOTAL) * 100}%` }}
             >
-              <span className="meter-label block text-center text-chrome-dim/60">{t.menit}′</span>
+              <span className="meter-label block text-center text-chrome-dim">{t.menit}′</span>
               <span
                 aria-hidden="true"
                 className="mx-auto mt-1.5 block h-3 w-3 rounded-full border-2 border-signal bg-graphite-2"
@@ -77,7 +77,7 @@ export default function Interaction() {
           ))}
         </ol>
 
-        <p className="meter-label mt-8 leading-[1.7] text-chrome-dim/45">
+        <p className="meter-label mt-8 leading-[1.7] text-chrome-dim">
           Susunan interaksi di atas adalah contoh untuk keperluan purwarupa desain.
         </p>
       </div>

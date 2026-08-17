@@ -132,7 +132,7 @@ const Pricing = () => {
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-signal to-signal-2 text-chrome text-xs font-semibold px-4 py-1.5 rounded-full flex items-center gap-1 shadow-lg">
+                  <div className="bg-gradient-to-r from-signal to-signal-2 text-graphite text-xs font-semibold px-4 py-1.5 rounded-full flex items-center gap-1 shadow-lg">
                     <StarIcon className="w-3.5 h-3.5" />
                     TERPOPULER
                   </div>
@@ -151,7 +151,7 @@ const Pricing = () => {
                     {plan.price}
                   </span>
                   {plan.duration && (
-                    <span className="text-sm text-signal/70">
+                    <span className="text-sm text-signal">
                       / {plan.duration}
                     </span>
                   )}
@@ -177,7 +177,7 @@ const Pricing = () => {
                 whileTap={{ scale: 0.98 }}
                 className={`block w-full text-center px-6 py-3 rounded-xl font-semibold transition-all ${
                   plan.popular 
-                    ? 'bg-gradient-to-r from-signal to-signal hover:from-signal hover:to-signal-2 text-chrome shadow-lg shadow-signal/20' 
+                    ? 'bg-gradient-to-r from-signal to-signal-2 text-graphite shadow-lg shadow-signal/20 hover:from-signal-2 hover:to-signal' 
                     : 'bg-graphite-2 hover:bg-signal/12 text-signal border border-chrome/12'
                 }`}
               >
@@ -208,7 +208,7 @@ const Pricing = () => {
                   >
                     {plan.popular && (
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                        <div className="bg-gradient-to-r from-signal to-signal-2 text-chrome text-xs font-semibold px-4 py-1.5 rounded-full flex items-center gap-1 shadow-lg">
+                        <div className="bg-gradient-to-r from-signal to-signal-2 text-graphite text-xs font-semibold px-4 py-1.5 rounded-full flex items-center gap-1 shadow-lg">
                           <StarIcon className="w-3.5 h-3.5" />
                           TERPOPULER
                         </div>
@@ -227,7 +227,7 @@ const Pricing = () => {
                           {plan.price}
                         </span>
                         {plan.duration && (
-                          <span className="text-xs sm:text-sm text-signal/70">
+                          <span className="text-xs sm:text-sm text-signal">
                             / {plan.duration}
                           </span>
                         )}
@@ -253,7 +253,7 @@ const Pricing = () => {
                       whileTap={{ scale: 0.98 }}
                       className={`block w-full text-center px-6 py-3 rounded-xl font-semibold text-sm sm:text-base transition-all ${
                         plan.popular 
-                          ? 'bg-gradient-to-r from-signal to-signal hover:from-signal hover:to-signal-2 text-chrome shadow-lg shadow-signal/20' 
+                          ? 'bg-gradient-to-r from-signal to-signal-2 text-graphite shadow-lg shadow-signal/20 hover:from-signal-2 hover:to-signal' 
                           : 'bg-graphite-2 hover:bg-signal/12 text-signal border border-chrome/12'
                       }`}
                     >

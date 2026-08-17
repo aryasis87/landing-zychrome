@@ -67,7 +67,7 @@ const itemVariants = {
 
 const Schedule = () => {
   return (
-    <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-signal/30 to-white overflow-hidden" aria-labelledby="schedule-heading">
+    <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-graphite-2 to-graphite overflow-hidden" aria-labelledby="schedule-heading">
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" aria-hidden="true">
         <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-signal rounded-full filter blur-xl"></div>
         <div className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-signal rounded-full filter blur-xl"></div>
@@ -157,17 +157,17 @@ const Schedule = () => {
 
                   <motion.div 
                     whileHover={{ x: 5 }}
-                    className={`p-4 sm:p-6 rounded-xl ${item.highlight ? 'bg-signal text-chrome' : 'bg-graphite-2'} shadow-sm border ${item.highlight ? 'border-signal' : 'border-chrome/12'} transition-all`}
+                    className={`p-4 sm:p-6 rounded-xl ${item.highlight ? 'bg-signal text-graphite' : 'bg-graphite-2'} shadow-sm border ${item.highlight ? 'border-signal' : 'border-chrome/12'} transition-all`}
                   >
                     <div className="flex flex-col gap-2 sm:gap-4">
-                      <p className={`font-mono font-medium text-xs sm:text-sm ${item.highlight ? 'text-chrome/85' : 'text-signal'}`}>
+                      <p className={`font-mono font-medium text-xs sm:text-sm ${item.highlight ? 'text-graphite/85' : 'text-signal'}`}>
                         {item.time}
                       </p>
                       <div>
-                        <h3 className={`text-base sm:text-lg font-bold ${item.highlight ? 'text-chrome' : 'text-chrome'}`}>
+                        <h3 className={`text-base sm:text-lg font-bold ${item.highlight ? 'text-graphite' : 'text-chrome'}`}>
                           {item.title}
                         </h3>
-                        <p className={`mt-1 text-xs sm:text-sm ${item.highlight ? 'text-chrome' : 'text-signal'}`}>
+                        <p className={`mt-1 text-xs sm:text-sm ${item.highlight ? 'text-graphite/90' : 'text-chrome-dim'}`}>
                           {item.description}
                         </p>
                       </div>

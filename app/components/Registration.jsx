@@ -21,7 +21,7 @@ const Registration = () => {
   return (
     <section
       id="register"
-      className="py-12 sm:py-16 bg-gradient-to-b from-signal/30 to-white relative overflow-hidden"
+      className="py-12 sm:py-16 bg-gradient-to-b from-graphite-2 to-graphite relative overflow-hidden"
       aria-labelledby="register-heading"
     >
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-[-1]">
@@ -104,7 +104,7 @@ const Registration = () => {
                 {/* Close Button */}
                 <button
                   onClick={() => setShowDemoPopup(false)}
-                  className="w-full bg-gradient-to-r from-signal to-signal text-chrome font-semibold py-2.5 sm:py-3 rounded-lg hover:from-signal hover:to-signal-2 transition-all shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-signal text-sm sm:text-base"
+                  className="w-full bg-gradient-to-r from-signal to-signal text-graphite font-semibold py-2.5 sm:py-3 rounded-lg hover:from-signal hover:to-signal-2 transition-all shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-signal text-sm sm:text-base"
                 >
                   Mengerti, Tutup
                 </button>
@@ -272,7 +272,7 @@ const Registration = () => {
               type="submit"
               whileHover={!shouldReduceMotion && { scale: 1.02 }}
               whileTap={!shouldReduceMotion && { scale: 0.98 }}
-              className="mt-6 w-full flex justify-center items-center px-6 py-2.5 sm:py-3 bg-gradient-to-r from-signal to-signal text-chrome font-bold rounded-lg hover:from-signal hover:to-signal-2 transition-all text-sm sm:text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-signal shadow-lg"
+              className="mt-6 w-full flex justify-center items-center px-6 py-2.5 sm:py-3 bg-gradient-to-r from-signal to-signal text-graphite font-bold rounded-lg hover:from-signal hover:to-signal-2 transition-all text-sm sm:text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-signal shadow-lg"
             >
               Daftar Sekarang
               <ArrowRightIcon className="w-4 h-4 sm:w-5 sm:h-5 ml-2" aria-hidden="true" />

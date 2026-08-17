@@ -71,7 +71,7 @@ const Sponsorship = () => {
   const silverSponsors = sponsors.filter(sponsor => sponsor.tier === "silver");
 
   return (
-    <section className="relative py-12 sm:py-16 bg-gradient-to-b from-white to-signal/30 overflow-hidden">
+    <section className="relative py-12 sm:py-16 bg-gradient-to-b from-graphite to-graphite-2 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-signal rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-signal rounded-full filter blur-3xl"></div>
