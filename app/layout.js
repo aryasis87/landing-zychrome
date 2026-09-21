@@ -5,10 +5,10 @@ import { Chivo, Poppins } from 'next/font/google';
 const chivo = Chivo({ variable: '--font-chivo', subsets: ['latin'], weight: ['600', '700', '900'] });
 const poppins = Poppins({ variable: '--font-poppins', weight: ['400', '600', '700'], subsets: ['latin'], display: 'swap' });
 
-const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Zychrome","description":"Webinar interaktif","url":"https://zychrome.pintuweb.com","inLanguage":"id"};
+const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Zychrome","description":"Webinar interaktif","url":"https://landing-zychrome.vercel.app","inLanguage":"id"};
 
 export const metadata = {
-  metadataBase: new URL("https://zychrome.pintuweb.com"),
+  metadataBase: new URL("https://landing-zychrome.vercel.app"),
   title: "Zychrome — Webinar Interaktif Para Ahli",
   description: "Zychrome: optimalkan skill kamu melalui webinar interaktif dan inspiratif dari para ahli terbaik.",
   applicationName: "Zychrome",
@@ -16,11 +16,11 @@ export const metadata = {
   authors: [{ name: "Zychrome" }],
   creator: "Zychrome",
   publisher: "Zychrome",
-  alternates: { canonical: "https://zychrome.pintuweb.com" },
+  alternates: { canonical: "https://landing-zychrome.vercel.app" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://zychrome.pintuweb.com",
+    url: "https://landing-zychrome.vercel.app",
     siteName: "Zychrome",
     title: "Zychrome — Webinar Interaktif Para Ahli",
     description: "Zychrome: optimalkan skill kamu melalui webinar interaktif dan inspiratif dari para ahli terbaik.",
