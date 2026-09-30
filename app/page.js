@@ -1,31 +1,39 @@
 import Hero from "./components/Hero";
 import Interaction from "./components/Interaction";
-import About from "./components/About";
-import Speakers from "./components/Speakers";
-import Schedule from "./components/Schedule";
-import TargetAudience from "./components/TargetAudience";
-import Pricing from "./components/Pricing";
+import Sesi from "./components/Sesi";
+import Narasumber from "./components/Narasumber";
+import Rundown from "./components/Rundown";
+import Untuk from "./components/Untuk";
+import Harga from "./components/Harga";
 import FAQ from "./components/FAQ";
 import Registration from "./components/Registration";
-import Sponsorship from "./components/Sponsorship";
-import Message from "./components/Message";
+import { SESI, SITE } from "@/lib/sesi";
+
+const eventLd = {
+  "@context": "https://schema.org",
+  "@type": "EducationEvent",
+  name: `Zychrome Sesi ${SESI.nomor}: ${SESI.judul}`,
+  startDate: `${SESI.iso}T19:30:00+07:00`,
+  endDate: `${SESI.iso}T21:05:00+07:00`,
+  eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
+  eventStatus: "https://schema.org/EventScheduled",
+  location: { "@type": "VirtualLocation", url: SITE },
+  organizer: { "@type": "Organization", name: "Zychrome", url: SITE },
+};
 
 export default function Home() {
   return (
-    <>
-      <main>
-        <Message />
-        <Hero />
-        <Interaction />
-        <About />
-        <Speakers />
-        <Schedule />
-        <TargetAudience />
-        <Pricing />
-        <FAQ />
-        <Registration />
-        <Sponsorship />
-      </main>
-    </>
+    <main>
+      <Hero />
+      <Interaction />
+      <Sesi />
+      <Narasumber />
+      <Rundown />
+      <Untuk />
+      <Harga />
+      <FAQ />
+      <Registration />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventLd) }} />
+    </main>
   );
 }

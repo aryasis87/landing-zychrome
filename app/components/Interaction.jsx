@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 /* ============================================================================
@@ -22,7 +23,7 @@ const TOTAL = 95;
 
 export default function Interaction() {
   return (
-    <section id="interaksi" className="relative overflow-hidden bg-graphite-2 py-20 md:py-28">
+    <section id="interaksi" className="relative scroll-mt-16 overflow-hidden bg-graphite-2 py-20 md:py-28">
       <div aria-hidden="true" className="panel-grid absolute inset-0 opacity-40" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6">
@@ -77,9 +78,13 @@ export default function Interaction() {
           ))}
         </ol>
 
-        <p className="meter-label mt-8 leading-[1.7] text-chrome-dim">
-          Susunan interaksi di atas adalah contoh untuk keperluan purwarupa desain.
-        </p>
+        <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <p className="meter-label leading-[1.7] text-chrome-dim">Susunan interaksi di atas adalah contoh untuk keperluan purwarupa desain.</p>
+          <div className="flex shrink-0 flex-wrap gap-3">
+            <Link href="/coba" className="meter-label bg-signal px-4 py-3 text-graphite hover:bg-signal-2">Coba dua di antaranya</Link>
+            <Link href="/papan-hasil" className="meter-label border border-chrome/25 px-4 py-3 text-chrome hover:border-signal hover:text-signal">Lihat papan hasil</Link>
+          </div>
+        </div>
       </div>
     </section>
   );

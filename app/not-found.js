@@ -1,20 +1,20 @@
-// app/not-found.js
-import Link from 'next/link';
+import Link from "next/link";
+
+export const metadata = { title: "Sinyal hilang" };
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white text-gray-800 font-sans">
-      <div className="text-center max-w-lg px-6 py-12">
-        <h1 className="text-6xl font-extrabold mb-4 text-gray-900">404</h1>
-        <p className="text-lg mb-6 text-gray-600">Oops! The page you&apos;re looking for doesn&apos;t exist.</p>
-        <Link
-          href="/"
-          className="inline-block bg-gray-900 text-white py-3 px-8 rounded-md text-lg font-semibold hover:bg-gray-800 transition duration-300"
-        >
-          Go Back Home
-        </Link>
+    <main className="relative flex min-h-[80vh] items-center overflow-hidden bg-graphite px-6 pt-16">
+      <div aria-hidden="true" className="panel-grid absolute inset-0 opacity-60" />
+      <div className="relative mx-auto max-w-2xl">
+        <p className="meter-label text-warn">404 · Sinyal hilang</p>
+        <h1 className="mt-5 text-4xl font-bold md:text-5xl">Halaman ini tidak memancarkan apa pun</h1>
+        <p className="mt-4 leading-relaxed">Alamatnya mungkin salah, atau halamannya sudah dipindah.</p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link href="/" className="bg-signal px-6 py-3.5 text-sm font-bold text-graphite hover:bg-signal-2">Ke beranda</Link>
+          <Link href="/papan-hasil" className="border border-chrome/25 px-6 py-3.5 text-sm font-bold text-chrome hover:border-signal hover:text-signal">Papan hasil</Link>
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
-// This is a custom 404 page for a Next.js application. It provides a user-friendly message and a link to return to the homepage.

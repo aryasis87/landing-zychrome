@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { SESI } from '@/lib/sesi';
 
 const bacaan = [
   ['92%', 'Peserta ikut menjawab polling'],
@@ -26,7 +27,7 @@ export default function Hero() {
               <span aria-hidden="true" className="signal-bars">
                 <span /><span /><span /><span /><span />
               </span>
-              <span className="meter-label text-signal">Zychrome · Sesi interaktif</span>
+              <span className="meter-label text-signal">Sesi {SESI.nomor} · {SESI.hari}</span>
             </motion.p>
 
             <motion.h1
@@ -101,14 +102,14 @@ export default function Hero() {
                 ['Reaksi langsung', 61],
                 ['Kuis diselesaikan', 88],
               ].map(([label, nilai]) => (
-                <div key={label}>
-                  <div className="flex items-baseline justify-between gap-4">
-                    <dt className="text-sm text-chrome/90">{label}</dt>
-                    <dd className="meter-label text-signal">{nilai}%</dd>
-                  </div>
-                  <div className="mt-2.5 h-1.5 w-full bg-chrome/10">
-                    <div className="h-full bg-signal" style={{ width: `${nilai}%` }} />
-                  </div>
+                <div key={label} className="relative">
+                  <dt className="pr-14 text-sm text-chrome/90">{label}</dt>
+                  <dd>
+                    <span className="meter-label absolute top-0.5 right-0 text-signal">{nilai}%</span>
+                    <span aria-hidden="true" className="mt-2.5 block h-1.5 w-full bg-chrome/10">
+                      <span className="block h-full bg-signal" style={{ width: `${nilai}%` }} />
+                    </span>
+                  </dd>
                 </div>
               ))}
             </dl>
