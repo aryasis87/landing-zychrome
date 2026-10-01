@@ -1,6 +1,6 @@
-# Zychrome — Webinar Interaktif Para Ahli
+# Zychrome — Webinar yang Bisa Membalas Anda
 
-Zychrome: optimalkan skill kamu melalui webinar interaktif dan inspiratif dari para ahli terbaik.
+Zychrome: webinar 95 menit dengan enam titik interaksi. Sesi 07 "Mengenali penipuan digital untuk usaha kecil", Selasa 20 Oktober 2026. Coba polling dan kuisnya sebelum mendaftar.
 
 **Demo live:** https://landing-zychrome.vercel.app
 
@@ -14,14 +14,16 @@ Bahasa rupa **Sinyal**: webinar ini menjual keterlibatan, jadi motifnya meter si
 
 ## Halaman
 
-`/`
+- `/` — Sesi 07 "Mengenali penipuan digital untuk usaha kecil": enam titik interaksi dan pendaftaran
+- `/papan-hasil` — dasbor hasil polling dan kuis sesi sebelumnya
+- `/coba` — polling dan kuis interaktif yang bisa dicoba langsung
 
 ## Teknologi
 
 - Next.js 15.5 (App Router) dan React 19
 - Tailwind CSS v4
 - JavaScript
-- Heroicons, Framer Motion, Lucide (ikon), React Hook Form
+- Framer Motion (animasi hero)
 - Font: Chivo, Poppins (next/font)
 - SEO: metadata per halaman, Open Graph, JSON-LD, sitemap.xml, dan robots.txt
 
